@@ -1,0 +1,151 @@
+/* General container and card styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212; /* Dark background */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  width: 400px;
+  background-color: #2f2f2f; /* Slightly lighter than background */
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a; /* Darker border */
+  background-color: #2b2b2b; /* Input background */
+  color: #ffffff; /* White text */
+  caret-color: #ff5722; /* Bright caret for contrast */
+}
+
+.input::placeholder {
+  color: #888888; /* Dimmed placeholder text */
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #1983e6; /* Accent color */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1983e6; /* Darker shade on hover */
+}
+
+.link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #1983e6; /* Accent color for links */
+}
+
+.linkText {
+  color: #1983e6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Responsive design for medium and small screens */
+
+/* Medium screens (Tablets, max-width: 768px) */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Ensure card takes up most of the screen */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .logo {
+    width: 120px; /* Reduce logo size */
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 22px; /* Adjust font size for medium screens */
+    margin-bottom: 15px;
+  }
+
+  .input {
+    padding: 8px; /* Reduce input padding for medium screens */
+  }
+
+  .button {
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .link {
+    font-size: 12px; /* Reduce link font size */
+    margin-top: 15px; /* Adjust top margin for small screens */
+  }
+}
+
+/* Small screens (Mobile, max-width: 480px) */
+@media (max-width: 480px) {
+  .card {
+    width: 90%; /* Card takes up most of the screen */
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .logo {
+    width: 100px; /* Further reduce logo size */
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 20px; /* Smaller font size on small screens */
+    margin-bottom: 10px;
+  }
+
+  .input {
+    padding: 8px; /* Slightly reduce padding */
+  }
+
+  .button {
+    font-size: 14px; /* Keep button font size smaller for small screens */
+  }
+
+  .link {
+    font-size: 12px; /* Further reduce font size */
+    margin-top: 10px; /* Adjust margin */
+  }
+}

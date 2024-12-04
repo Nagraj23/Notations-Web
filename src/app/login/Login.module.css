@@ -1,0 +1,122 @@
+/* General container and form styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212; /* Dark background */
+}
+
+.form {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background: #373737; /* Dark background for the form */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+  width: 90%; /* Default width for small screens */
+  max-width: 500px; /* Limit max width to 500px */
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text */
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #3a3a3a; /* Dark border */
+  background-color: #2b2b2b; /* Dark input background */
+  border-radius: 4px;
+  color: #ffffff; /* White text */
+}
+
+.input::placeholder {
+  color: #888888; /* Dimmed placeholder text */
+}
+
+.button {
+  width: 100%; /* Make button full width by default */
+  font-size: medium;
+  padding: 10px;
+  background-color: #1983e6; /* Accent color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1983e6; /* Darker shade on hover */
+}
+
+.extraLinks {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column; /* Stack links vertically on small screens */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.link {
+  display: block;
+  color: #1983e6; /* Accent color for links */
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.link:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Responsive design for medium and small screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px; /* Adjust font size for medium screens */
+  }
+
+  .button {
+    width: 80%; /* Reduce button width on medium screens */
+  }
+
+  .extraLinks {
+    margin-top: 10px;
+  }
+
+  .input {
+    padding: 8px; /* Reduce input padding on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    width: 90%; /* Ensure the form takes up most of the screen on small screens */
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+
+  .title {
+    font-size: 18px; /* Further reduce font size on small screens */
+  }
+
+  .input {
+    padding: 8px; /* Reduce input padding on small screens */
+  }
+
+  .button {
+    width: 90%; /* Make button slightly smaller on small screens */
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .extraLinks {
+    margin-top: 10px;
+    flex-direction: column; /* Ensure links are stacked vertically on small screens */
+  }
+}
