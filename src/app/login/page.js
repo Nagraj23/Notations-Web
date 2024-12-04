@@ -83,7 +83,7 @@ export default function Page() {
         </button> 
         
         <Link href="register" className={styles.link}>
-          Don't have an account? Sign up.
+          Dont have an account? Sign up.
         </Link>
       </div>
     </div>
