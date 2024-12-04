@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import Dashboard from "./home/page";
 import Login from "./login/page";
 
-export default function home() {
+
+export default function Home() {
   const [userDetails, setUserDetails] = useState(null);
   const [userToken, setUserToken] = useState(null);
-  const [loading, setLoading] = useState(true); // To manage the initial loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserData = () => {
@@ -22,7 +24,7 @@ export default function home() {
       } catch (err) {
         console.error("Error fetching user details:", err);
       } finally {
-        setLoading(false); // Loading finished
+        setLoading(false);
       }
     };
 
@@ -30,7 +32,7 @@ export default function home() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Show a loader while data is being fetched
+    return <div>Loading...</div>;
   }
 
   return userToken && userDetails ? <Dashboard /> : <Login />;
